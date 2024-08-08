@@ -51,15 +51,15 @@ Transparent and Trustworthy Ecosystem:** Blockchain technology ensures data inte
 
 ### Key Motiviations
 
-##### Empowering Authors: 
+- **Empowering Authors:**
 Providing a platform for authors to directly reach their audience and earn fair compensation.
-##### Accelerating Research: 
+- **Accelerating Research:** 
 Facilitating knowledge exchange and collaboration among researchers.
-##### Democratizing Access: 
+- **Democratizing Access:**
 Breaking down barriers to information and making knowledge accessible to all.
-##### Promoting Innovation: 
+- **Promoting Innovation:**
 Fostering a vibrant ecosystem for data-driven innovation.
-##### Building a Sustainable Knowledge Economy: 
+- **Building a Sustainable Knowledge Economy:**
 Creating a new economic model based on the value of information.
 
 **By addressing the limitations of traditional publishing and data sharing models, OpenScience seeks to revolutionize the way knowledge is produced, distributed, and consumed.**
@@ -89,7 +89,12 @@ Please make sure to update tests as appropriate.
 Image to Base64 tool => https://elmah.io/tools/base64-image-encoder/
 
 ### Roadmap
-Coming soon
+The project roadmap includes the following key milestones:
+
+- **Phase 1:** Platform Development: Building the core platform infrastructure, including user interface, blockchain integration, and smart contract development.
+- **Phase 2:** Community Building: Attracting authors, researchers, and data providers to the platform.
+- **Phase 3:** Ecosystem Expansion: Integrating additional features such as data analysis tools, collaboration features, and payment options.
+- **Phase 4:** Scaling and Growth: Expanding the user base, increasing content diversity, and exploring new revenue streams.
 
 ### Reference
 

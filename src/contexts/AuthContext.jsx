@@ -10,7 +10,7 @@ import Loading from './../routes/components/Loading'
 import Web3 from 'web3'
 
 export const ABI = OpenScienceABI
-export const PROVIDER = window.ethereum || import.meta.env.VITE_ARBITRUM_PROVIDER
+export const PROVIDER = import.meta.env.VITE_ARBITRUM_PROVIDER_TESTNET || window.ethereum || import.meta.env.VITE_ARBITRUM_PROVIDER
 export const web3 = new Web3(PROVIDER)
 export const contract = new web3.eth.Contract(ABI, import.meta.env.VITE_OPENSCIENCE_CONTRACT_TESTNET)
 export const _ = web3.utils
