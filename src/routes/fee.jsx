@@ -13,97 +13,47 @@ export default function Fee({ title }) {
   Title(title)
   const [loaderData, setLoaderData] = useState(useLoaderData())
   const [isLoading, setIsLoading] = useState(true)
-  const [taotlRecordType, setTotalRecordType] = useState(0)
-  const [totalResolve, setTotalResolve] = useState(0)
+  const [registerFee, setRegisterFee] = useState(0)
+  const [royaltyFee, setRoyaltyFee] = useState(0)
   const [recordTypeList, setRecordTypeList] = useState(0)
   const auth = useAuth()
   const navigate = useNavigate()
   const tableBodyRef = useRef()
 
-  const getTotalRecordType = async () => await contract.methods._recordTypeCounter().call()
-  const getTotalResolve = async () => await contract.methods._resolveCounter().call()
-  const getResolveList = async (wallet) => await contract.methods.getResolveList(wallet).call()
-  const getRecordTypeNameList = async () => await contract.methods.getRecordTypeNameList().call()
+  const getFee = async (name) => await contract.methods.fee(name).call()
 
   useEffect(() => {
-    getTotalRecordType().then((res) => {
-      setTotalRecordType(_.toNumber(res))
-      setIsLoading(false)
+    getFee(`register`).then((res) => {
+      setRegisterFee(_.toNumber(res))
     })
-
-    getTotalResolve().then((res) => {
-      setTotalResolve(_.toNumber(res))
-      setIsLoading(false)
-    })
-
-    getResolveList(auth.wallet).then((res) => {
-      console.log(res)
-      setIsLoading(false)
-    })
-
-    getRecordTypeNameList(auth.wallet).then((res) => {
-      console.log(res)
-      setRecordTypeList(res)
-      setIsLoading(false)
-
-      if (res.length) {
-        res.map((item, i) => {
-          tableBodyRef.current.innerHTML += `<tr class="animate__animated animate__fadeInDown text-center" style="--animate-duration: .${i * 2}s;">
-              <th scope="row" class="text-left">
-                .${item.name}
-              </th>
-              <td> ${item.manager.slice(0, 4)}...${item.manager.slice(38)}</td>
-              <td><span class="badge badge-purpink">${_.fromWei(item.price, `ether`)} ⏣LYX</span></td>
-              <td>${_.toNumber(item.percentage)} %</td>
-              <td>${100 - _.toNumber(item.percentage)} %</td>
-            </tr>`
-        })
-      }
+    getFee(`royalty`).then((res) => {
+      setRoyaltyFee(_.toNumber(res))
     })
   }, [])
 
   return (
     <section className={styles.section}>
       <div className={`${styles['container']} __container ms-motion-slideUpIn`} data-width={`large`}>
-        <div className={`grid grid--fit mt-50`} style={{ '--data-width': '100px', gap: '1rem' }}>
-          <div className={`card`}>
-            <div className={`card__body`}>
-              <p>Extensions</p>
-              <h2>{taotlRecordType}</h2>
-            </div>
-          </div>
-          <div className={`card`}>
-            <div className={`card__body`}>
-              <p>Names</p>
-              <h2>{totalResolve}</h2>
-            </div>
-          </div>
-          <div className={`card`}>
-            <div className={`card__body`}>
-              <p>Owners</p>
-              <h2>{taotlRecordType}</h2>
-            </div>
-          </div>
-        </div>
-
-        <h3 className={`mt-40`}>Extensions</h3>
+        <h3 className={`mt-40`}>Fee</h3>
         <div className={`card`}>
           <div className={`card__body`}>
             <div className={`${styles['extension']} table-responsive`}>
               <table className={`data-table`}>
-                <caption>Extension list</caption>
+                <caption>FEE</caption>
                 <thead>
                   <tr>
                     <th scope="col" className={`text-left`}>
-                      Extension
+                      Register fee
                     </th>
-                    <th scope="col">Manager</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Manager %</th>
-                    <th scope="col">{import.meta.env.VITE_NAME} %</th>
+                    <th scope="col">Royalty fee</th>
                   </tr>
                 </thead>
-                <tbody ref={tableBodyRef}></tbody>
+                <tbody>
+                  <tr>
+                    <td className={`text-center`}>{registerFee} $ARB</td>
+                    <td className={`text-center`}>{royaltyFee} %</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>

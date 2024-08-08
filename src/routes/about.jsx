@@ -9,20 +9,24 @@ export default function About({ title }) {
 
   const [faq, setFaq] = useState([
     {
-      q: `What is Dropid.name?`,
-      a: `Dropid.name is a platform that allows users to mint and own unique Web3 usernames on the LUKSO blockchain. These usernames can be used across various platforms and applications.`,
+      q: `What is OpenScience?`,
+      a: `OpenScience is a decentralized platform that enables the buying and selling of articles and books, fostering open access to knowledge.`,
     },
     {
-      q: `How do I get a Dropid username?`,
-      a: `You can acquire a Dropid username by purchasing it directly from the marketplace or participating in auctions.`,
+      q: `How does OpenScience work?`,
+      a: `Users can upload and sell their articles or books as digital assets. Buyers can search, discover, and purchase these digital assets.`,
     },
     {
-      q: `What can I do with my Dropid username?`,
-      a: `Currently, you can use your Dropid username on Telegram by connecting it to the Universal Profile Bot. Future integrations will allow you to send funds and potentially access other Web3 services.`,
+      q: `Is OpenScience free to use?`,
+      a: `There are fees associated with listing and selling items, but browsing and searching are free.`,
     },
     {
-      q: `Is my Dropid username secure?`,
-      a: `Yes, Dropid usernames are stored securely on the LUKSO blockchain, providing a high level of security.`,
+      q: `What kind of articles and books can be sold on OpenScience?`,
+      a: `A wide range of articles and books across various subjects can be sold on OpenScience.`,
+    },
+    {
+      q: `How do I sell an article or book on OpenScience?`,
+      a: `To sell an article or book, you need to create an account, upload your content, set a price, and complete the listing process.`,
     },
   ])
   useEffect(() => {}, [])
@@ -39,18 +43,9 @@ export default function About({ title }) {
       <div className={`__container`} data-width={`large`}>
         <article>
           <p>
-            We are committed to ensuring that everyone has a unique and truly personalized presence in the digital space. Dropid allows users to establish their identity with a customized Web3 username. Utilizing the strong LUKSO blockchain, we
-            provide secure, tradable, and verifiable digital identities. Dropid is a creation of Aratta Labs, a team dedicated to pushing the boundaries of Web3. Our smart contract, developed based on the Ethereum Improvement Proposals (EIP) for
-            Ethereum Domain Name Service, forms the foundation of Dropid, delivering a decentralized and user-focused experience. Come and join us in shaping the future of the internet.
-          </p>{' '}
-          <p>
-            Dropid is a product of Aratta Labs, a team dedicated to pushing the boundaries of Web3. Our smart contract, built based on the{' '}
-            <a href={`https://eips.ethereum.org/EIPS/eip-137`} target={`_blank`}>
-              ERC-137 (Ethereum Domain Name Service)
-            </a>{' '}
-            Ethereum Improvement Proposals, underpins the core functionality of Dropid, enabling a decentralized and user-centric experience.
-          </p>{' '}
-          <p>Join us in shaping the future of the internet.</p>
+            Aratta Labs is a pioneer in decentralized knowledge sharing. Our OpenScience platform democratizes access to information by enabling the direct exchange of articles and books. Through blockchain technology, we ensure data integrity,
+            transparency, and fair compensation for content creators.
+          </p>
         </article>
 
         <Heading title={`Roadmap`} subTitle={`Coming soon`}></Heading>

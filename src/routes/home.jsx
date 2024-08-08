@@ -223,7 +223,7 @@ function Home({ title }) {
               <img alt={`eTree`} src={Tree} />
             </figure>
             <h1 className={`${styles['example']} animate__animated animate__fadeInDown`}>OpenScience</h1>
-            <p>Find the data you need to fuel your research and innovation!</p>
+            <p>{import.meta.env.VITE_DESCRIPTION}</p>
 
             <div className={`${styles['form']} w-100 mt-20`}>
               <div className={`${styles['form__container']} d-flex flex-row`}>
