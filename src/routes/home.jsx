@@ -12,7 +12,7 @@ import Coin from './../../src/assets/coin.png'
 import Tree from './../../src/assets/tree.svg'
 import Slide2 from './../../src/assets/slide1.png'
 import Puzzle from './../../src/assets/puzzle.svg'
-
+import Web3 from 'web3'
 import party from 'party-js'
 import styles from './Home.module.scss'
 
@@ -179,7 +179,13 @@ function Home({ title }) {
       )
       .then((events) => events)
   }
-  const getData = async () => await contract.methods.getDataList().call()
+
+  const getData = async () => {
+    const myWeb3 = new Web3(`${import.meta.env.VITE_ARBITRUM_PROVIDER_TESTNET}`)
+    const myContract = new myWeb3.eth.Contract(ABI, import.meta.env.VITE_OPENSCIENCE_CONTRACT_TESTNET)
+    return await myContract.methods.getDataList().call()
+  }
+
   const getTotalResolve = async () => await contract.methods._resolveCounter().call()
   const getResolveList = async (wallet) => await contract.methods.getResolveList(wallet).call()
   const getResolver = async () => await contract.methods.resolver(`0x7e058f5786c9fdc2c31ddd04421693cd9d671250e80405da9a2d85a37ffae6a7`).call()
