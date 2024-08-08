@@ -93,12 +93,12 @@ Coming soon
 
 ### Reference
 
- - [1] [Lukso](https://docs.lukso.tech/learn/concepts/#transaction-relay-service:~:text=On%20LUKSO%2C%20users%20currently%20get%20a%20free%20monthly%20quota%20of%2020.000.000%20GAS%20when%20creating%20a%20Universal%20Profile%20through%20the%20Universal%20Profile%20Browser%20Extension.)
+ - [1] []()
 
 ## License
 
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
 
-[Amir Rahimi](https://universallink.me/u/atenyun) - Fullstack blockchain developer
+[Amir Rahimi](https://aratta.dev) - Fullstack Web3 Developer
 
 
