@@ -288,30 +288,34 @@ function Home({ title }) {
           </div>
         </div>
 
-        <Heading title={`New release`}></Heading>
-        <div className={`${styles['data']} grid grid--fill mt-40`} style={{ '--data-width': '220px', gap: '1rem' }}>
-          {data.list &&
-            data.list &&
-            data.list.length > 0 &&
-            data.list.map((item, i) => (
-              <Link key={i} to={`data/${item.dataId}`} className={`${styles['data__item']}`}>
-                <div className={`card`}>
-                  <div className={`card__body d-flex flex-column`} style={{ gap: `.4rem` }}>
-                    <figure>
-                      <img src={`${item?.metadata_data?.image}`} width={`100%`} height={`250px`} alt={item.title} />
-                    </figure>
-                    <h4 className={`mt-10`}>{`${item.title}`}</h4>
-                    <p className={`mt-10`}>
-                      <span>Price</span>
-                    </p>
-                    <p>
-                      <b>{web3.utils.fromWei(web3.utils.toNumber(item.price), `ether`)} $ARB</b>
-                    </p>
-                    <button>Buy Now</button>
-                  </div>
-                </div>
-              </Link>
-            ))}
+        <div className=" mt-40">
+          <div className={`__container`} data-width={`large`}>
+            <Heading title={`New release`}></Heading>
+            <div className={`${styles['data']} grid grid--fill`} style={{ '--data-width': '220px', gap: '1rem' }}>
+              {data.list &&
+                data.list &&
+                data.list.length > 0 &&
+                data.list.map((item, i) => (
+                  <Link key={i} to={`data/${item.dataId}`} className={`${styles['data__item']}`}>
+                    <div className={`card`}>
+                      <div className={`card__body d-flex flex-column`} style={{ gap: `.4rem` }}>
+                        <figure>
+                          <img src={`${item?.metadata_data?.image}`} width={`100%`} height={`250px`} alt={item.title} />
+                        </figure>
+                        <h4 className={`mt-10`}>{`${item.title}`}</h4>
+                        <p className={`mt-10`}>
+                          <span>Price</span>
+                        </p>
+                        <p>
+                          <b>{web3.utils.fromWei(web3.utils.toNumber(item.price), `ether`)} $ARB</b>
+                        </p>
+                        <button>Buy Now</button>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+            </div>
+          </div>
         </div>
       </section>
     </>

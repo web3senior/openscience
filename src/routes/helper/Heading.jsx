@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const styleTitle = {
   fontFamily: 'Libre Franklin',
-  fontSize: 'calc(2.1em + .4vw)',
+  fontSize: 'calc(1.1em + .4vw)',
   fontWeight: 'bold',
   padding: '1rem 0 0 0',
 }
