@@ -25,12 +25,6 @@ In addition to traditional content, OpenScience enables the trading of various d
 
 OpenScience is dedicated to making knowledge more accessible, empowering authors, and promoting data-driven innovation. 🚀📚🔗
 
-## GG21 DeSci Round
-OpenScience is a flagship project specifically designed for the GG21 DeSci Round, aiming to redefine the landscape of knowledge sharing and data economy.
-
-Read More 👇
-https://explorer.gitcoin.co/?utm_source=grants.gitcoin.co&utm_medium=internal_link&utm_campaign=gg19&utm_content=community-rounds#/round/42161/387
-
 ### Benefits
 - **Democratized Knowledge:** Unrestricted access to information for researchers, students, and the public.
 - **Fair Compensation for Authors:** Authors receive direct compensation for their work through transparent royalty payments.
@@ -104,6 +98,7 @@ The project roadmap includes the following key milestones:
 
 Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
 
-[Amir Rahimi](https://aratta.dev) - Fullstack Web3 Developer
+### Contributing
 
+Anyone can fork, modify, and redistribute.
 
